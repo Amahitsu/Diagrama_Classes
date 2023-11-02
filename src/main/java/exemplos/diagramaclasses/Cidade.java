@@ -8,18 +8,16 @@ public class Cidade implements ILocalizacao{
     private String siglaUF;
     private List<Endereco> end;
     private Prefeito prefeito;
-    private float latitude;
-    private float longitude;
-   
+
 
     public Cidade() {
     }
 
-    public Cidade(String nome, String siglaUF, String nomePrefeito, String partidoPrefeito) {
+    public Cidade(String nome, String siglaUF, String nomePrefeito, String sexoPrefeito, String partidoPrefeito) {
         this.nome = nome;
         this.siglaUF = siglaUF;
         this.end = new ArrayList<>();
-        prefeito = new Prefeito(nomePrefeito, partidoPrefeito);
+        prefeito = new Prefeito(nomePrefeito, sexoPrefeito, partidoPrefeito);
     }
 
     public String getNome() {

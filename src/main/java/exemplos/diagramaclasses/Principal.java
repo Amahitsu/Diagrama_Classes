@@ -15,8 +15,8 @@ public class Principal {
         Pessoa pessoa5 = new Pessoa("Pedro", "Masculino");
         
         //Cadastro de cidade
-        Cidade cidade = new Cidade(" Blumenau", "SC", "Argelino","Novo");
-        Cidade cidade2 = new Cidade(" Indaial", "SC", "Sandrine","Psol");
+        Cidade cidade = new Cidade(" Blumenau", "SC", "Argelino", "Masculino", "Novo");
+        Cidade cidade2 = new Cidade(" Indaial", "SC", "Sandrine","Feminino", "Psol");
                 
         //Cadastro de endereço professor     
         Endereco endProf = new Endereco("Canela Fina", cidade, 775, 89184000);
