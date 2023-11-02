@@ -14,7 +14,7 @@ public class Aluno extends Pessoa{
         this.matricula = this.matricula;
     }
     
-    public void setlistaObra(Aluno aluno) {
+    public void setlistaAluno(Aluno aluno) {
         this.ListaAluno.add(aluno);
     }
 

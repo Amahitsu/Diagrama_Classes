@@ -1,6 +1,6 @@
 package exemplos.diagramaclasses;
 
-public class Endereco {
+public class Endereco implements ILocalizacao{
     private String rua;
     private Cidade cidade;
     private int numero;
@@ -46,6 +46,13 @@ public class Endereco {
 
     public void setCep(int cep) {
         this.cep = cep;
+    }
+
+    @Override
+    public String MapaBase64(float latitude, float longitude) {
+        
+            return "A rua "+ this.rua +"\n fica na latitude de: " + latitude +
+                "\n e sua longitude é de: " + longitude;
     }
     
     

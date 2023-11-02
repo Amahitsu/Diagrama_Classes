@@ -2,13 +2,15 @@ package exemplos.diagramaclasses;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
 
 public class Cidade implements ILocalizacao{
     private String nome;
     private String siglaUF;
     private List<Endereco> end;
     private Prefeito prefeito;
+    private float latitude;
+    private float longitude;
+   
 
     public Cidade() {
     }
@@ -53,13 +55,10 @@ public class Cidade implements ILocalizacao{
     }
 
     @Override
-    public String MapaBase64(float latitude, float longitude) {
-        latitude = 12.7701f;
-        longitude = 39.8850f;
+    public String MapaBase64(float latitude, float longitude) {  
         
-        return "\n Sua latitude é de: " + latitude +
-                "\n e sua longitude é de: " + longitude;
+        return "A cidade" + this.nome + "\n tem a latitude de: " + latitude +
+                "\n e longitude de: " + longitude;
     }
-
     
 }

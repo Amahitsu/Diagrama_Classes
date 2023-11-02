@@ -4,12 +4,12 @@ package exemplos.diagramaclasses;
 import java.util.ArrayList;
 
 public class Prefeito extends Pessoa {
-    
-    private String nome;
+
     private String Partido;
    
 
-    public Prefeito(String nome, String Partido) {
+    public Prefeito(String nome, String sexo, String Partido) {
+        super(nome, sexo);
         this.nome = nome;
         this.Partido = Partido;
     }
