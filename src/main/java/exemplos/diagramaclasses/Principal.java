@@ -90,7 +90,8 @@ public class Principal {
         Despesa despesas = new Despesa();
         despesas.addListaDespesa(despesa1);
         despesas.addListaDespesa(despesa2);      
-
+        
+        //calculando o faturamento
         JOptionPane.showMessageDialog(null, "Total faturado: " + ie.faturamento(despesas.getListaDespesa(), receitas.getListaReceita()));
         
     }
