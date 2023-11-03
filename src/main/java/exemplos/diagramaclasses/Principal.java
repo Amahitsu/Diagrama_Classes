@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 public class Principal {
 
     public static void main(String[] args) {
-        
+              
         //Cadastro de pessoa        
         Pessoa pessoa1 = new Pessoa("Mateus", "Masculino");
         Pessoa pessoa2 = new Pessoa("Amanda","Feminino");
@@ -15,13 +15,17 @@ public class Principal {
         Pessoa pessoa5 = new Pessoa("Pedro", "Masculino");
         
         //Cadastro de cidade
-        Cidade cidade = new Cidade(" Blumenau", "SC", "Argelino", "Masculino", "Novo");
+        Cidade cidade1 = new Cidade(" Blumenau", "SC", "Argelino", "Masculino", "Novo");
         Cidade cidade2 = new Cidade(" Indaial", "SC", "Sandrine","Feminino", "Psol");
-                
-        //Cadastro de endereço professor     
-        Endereco endProf = new Endereco("Canela Fina", cidade, 775, 89184000);
-        Endereco endProf2 = new Endereco("Inhame", cidade2, 755, 89184233);
+        Cidade cidade3 = new Cidade(" Rio de janeiro", "RJ", "Rita Camargo","Feminino", "Psol");
+        Cidade cidade4= new Cidade(" São Paulo", "SP", "Marcio Rosa","Masculino", "PT");  
         
+        
+        //Cadastro de endereço professor     
+        Endereco endProf = new Endereco("Canela Fina", cidade1, 775, 89184000);
+        Endereco endProf2 = new Endereco("Inhame", cidade2, 755, 89184233);
+        Endereco endProf3 = new Endereco("Batata", cidade3, 760, 87089000);
+        Endereco endProf4 = new Endereco("Getúlio Vargas", cidade4, 799, 89298367);
         //cadastro da matricula
         Matricula m = new Matricula();
         m.gerarMatricula();      
@@ -90,13 +94,24 @@ public class Principal {
                                       "\n"+"Turma: "+aula2.getTurma().getNome()+ " , Periodo: "+aula2.getTurma().getPeriodo());
 
         JOptionPane.showMessageDialog(null,"EXEMPLO ASSOCIAÇÃO BINARIA 0.*, 1.1");
-        cidade.adicionarEndereco(endProf);
-        cidade.adicionarEndereco(endProf2);
-        for (int x = 0; x < cidade.getEnd().size(); x++) {
-            JOptionPane.showMessageDialog(null, cidade.getNome() + cidade.getSiglaUF()
-                     +" - "+cidade.getPrefeito().getNome()+ "-"+cidade.getPrefeito().getPartido());
-        }
-        
+        cidade1.adicionarEndereco(endProf);
+        cidade2.adicionarEndereco(endProf2);
+        cidade3.adicionarEndereco(endProf3);
+        cidade4.adicionarEndereco(endProf4);
+        JOptionPane.showMessageDialog(null, cidade1.getNome() + "/ " + cidade1.getSiglaUF()
+                     +"\n Prefeito : " + cidade1.getPrefeito().getNome()+ "\n Partido: "
+                     + cidade1.getPrefeito().getPartido());
+        JOptionPane.showMessageDialog(null, cidade2.getNome() + "/ " + cidade2.getSiglaUF()
+                     +"\n Prefeito : " + cidade2.getPrefeito().getNome()+ "\n Partido: "
+                     + cidade2.getPrefeito().getPartido());
+        JOptionPane.showMessageDialog(null, cidade3.getNome() + "/ " + cidade3.getSiglaUF()
+                     +"\n Prefeito : " + cidade3.getPrefeito().getNome()+ "\n Partido: "
+                     + cidade3.getPrefeito().getPartido());
+        JOptionPane.showMessageDialog(null, cidade4.getNome() + "/ " + cidade4.getSiglaUF()
+                     +"\n Prefeito : " + cidade4.getPrefeito().getNome()+ "\n Partido: "
+                     + cidade4.getPrefeito().getPartido());
+   //------------------------------------------------------------------------------------------
+             
         //instanciando as classes Receita e Despesas
         Receita receita1 = new Receita("mensalidade paga",10000.00f);
         Receita receita2 = new Receita("auxilio bolsa",900.000f);
@@ -114,8 +129,8 @@ public class Principal {
         JOptionPane.showMessageDialog(null, "Total faturado: " + ie.faturamento(despesas.getListaDespesa(), receitas.getListaReceita()));
         
         //Mostrar cidade
-        JOptionPane.showMessageDialog(null, cidade.MapaBase64(48.2087f, -163.6894f));
-        JOptionPane.showMessageDialog(null,cidade2.MapaBase64(7.4284f, 44.4679f));
+        JOptionPane.showMessageDialog(null, cidade1.MapaBase64(48.2087f, -163.6894f));
+        JOptionPane.showMessageDialog(null, cidade2.MapaBase64(7.4284f, 44.4679f));
         
         //Mostrar Endereço
         JOptionPane.showMessageDialog(null, endProf.MapaBase64(-78.0408f, -21.8515f));

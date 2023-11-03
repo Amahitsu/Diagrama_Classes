@@ -25,7 +25,7 @@ public class Professor extends Pessoa{
                 + " Mora na Rua " + endProf.getRua()+"\n"
                 + " nº " + Integer.toString(endProf.getNumero())+"\n"
                 + " CEP: " + Integer.toString(endProf.getCep())+"\n"
-                + " na cidade de " + endProf.getCidade()+"\n";
+                + " na cidade de" + endProf.getCidade().getNome()+"\n";
     }
 
     public boolean cadastrarEndereco(Endereco pEnd) {

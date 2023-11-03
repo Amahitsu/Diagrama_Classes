@@ -8,6 +8,7 @@ public class Cidade implements ILocalizacao{
     private String siglaUF;
     private List<Endereco> end;
     private Prefeito prefeito;
+    private List<Cidade> cidade;
 
 
     public Cidade() {
@@ -40,11 +41,11 @@ public class Cidade implements ILocalizacao{
         this.siglaUF = siglaUF;
     }
     
-        public void adicionarEndereco(Endereco pEnd){
+    public void adicionarEndereco(Endereco pEnd){
         this.end.add(pEnd);
     }
     
-        public void EnderecoEndereco(Endereco pEnd){
+    public void EnderecoEndereco(Endereco pEnd){
         this.end.remove(pEnd);
     }
 
