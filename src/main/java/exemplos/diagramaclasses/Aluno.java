@@ -7,17 +7,12 @@ public class Aluno extends Pessoa{
 
     private Aluno colegaAtividade; // Associação unária com a mesma classe
     private Matricula matricula;
-    ArrayList<Aluno> ListaAluno = new ArrayList<>();
 
     public Aluno(String nome, String sexo, Matricula matricula)  {
         super(nome , sexo);
         this.matricula = this.matricula;
     }
     
-    public void setlistaAluno(Aluno aluno) {
-        this.ListaAluno.add(aluno);
-    }
-
     public Aluno getColegaAtividade() {
         return colegaAtividade;
     }

@@ -115,18 +115,18 @@ public class Principal {
         //instanciando as classes Receita e Despesas
         Receita receita1 = new Receita("mensalidade paga",10000.00f);
         Receita receita2 = new Receita("auxilio bolsa",900.000f);
-        Receita receitas = new Receita();
-        receitas.addListaReceita(receita1);
-        receitas.addListaReceita(receita2);
+        ArrayList<Receita> receita = new ArrayList<Receita>(); 
+        receita.add(receita1);
+        receita.add(receita2);    
         
         Despesa despesa1 = new Despesa("alimento",700.000f);
         Despesa despesa2 = new Despesa("luz", 900.000f);
-        Despesa despesas = new Despesa();
-        despesas.addListaDespesa(despesa1);
-        despesas.addListaDespesa(despesa2);      
+        ArrayList<Despesa> despesa = new ArrayList<Despesa>(); 
+        despesa.add(despesa1);
+        despesa.add(despesa2);      
         
         //calculando o faturamento
-        JOptionPane.showMessageDialog(null, "Total faturado: " + ie.faturamento(despesas.getListaDespesa(), receitas.getListaReceita()));
+        JOptionPane.showMessageDialog(null, "Total faturado: " + ie.faturamento(despesa, receita));
         
         //Mostrar cidade
         JOptionPane.showMessageDialog(null, cidade1.MapaBase64(48.2087f, -163.6894f));

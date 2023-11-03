@@ -8,8 +8,6 @@ public class Cidade implements ILocalizacao{
     private String siglaUF;
     private List<Endereco> end;
     private Prefeito prefeito;
-    private List<Cidade> cidade;
-
 
     public Cidade() {
     }
